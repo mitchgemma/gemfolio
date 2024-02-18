@@ -38,11 +38,16 @@
     &.hovered {
         width: 70%;
         height: 50%;
-      }
-      
-      &.topRightHovered {
-      width: 44%;
-      height: 52%;
+    }
+
+    &.topRightHovered {
+        width: 44%;
+        height: 52%;
+    }
+
+    &.bottomRightHovered {
+        width: 56%;
+        height: 24%;
     }
 }
 
@@ -58,6 +63,31 @@
         width: 30%;
         height: 70%;
     }
+
+    &.bottomRightHovered {
+        width: 44%;
+        height: 44%;
+    }
+}
+
+.bottomRightCorner {
+    bottom: 0;
+    right: 0;
+
+    &.topLeftHovered {
+        width: 50%;
+        height: 30%;
+    }
+
+    &.topRightHovered {
+        width: 76%;
+        height: 28%;
+    }
+
+    &.bottomRightHovered {
+        width: 64%;
+        height: 56%;
+    }
 }
 
 .bottomLeftCorner {
@@ -72,21 +102,11 @@
         width: 24%;
         height: 48%;
     }
-}
 
-.bottomRightCorner {
-    bottom: 0;
-    right: 0;
-
-    &.topLeftHovered {
-        width: 50%;
-        height: 30%;
-    }
-
-    &.topRightHovered {
-      width: 76%;
-      height: 28%;
-    }
+    &.bottomRightHovered {
+      width: 36%;
+      height: 76%;
+  }
 }
 
 .middle {
@@ -98,12 +118,17 @@
     position: absolute;
 
     &.topLeftHovered {
-        top: 50%;
-        left: 50%;
+      left: 50%;
+      top: 50%;
     }
 
     &.topRightHovered {
-      left: 24%;
-      top: 52%;
+        left: 24%;
+        top: 52%;
     }
+
+    &.bottomRightHovered {
+      left: 36%;
+      top: 24%;
+  }
 }
