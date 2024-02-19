@@ -31,8 +31,20 @@
 
 .corner,
 .middle {
-    transition: transform .35s ease-out, width .35s ease-out,
-        height .35s ease-out, top .35s ease-out, left .35s ease-out;
+    transition: transform 0.45s ease-out, width 0.45s ease-out,
+        height 0.45s ease-out, top 0.45s ease-out, left 0.45s ease-out, background-color .45s ease-out;
+    background-color: white;
+}
+
+.corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2em;
+
+  &:hover {
+    background-color: rgba(12, 125, 74, .8);
+  }
 }
 
 .middle {
