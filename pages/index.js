@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.scss';
 import React, { useState } from 'react';
+import Marquee from '@/components/marquee';
+import { marquee } from '@/constants';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,13 +31,38 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <Marquee 
+                text={marquee.top.text}
+                position={marquee.top.position}
+                link={marquee.top.link}
+            />
+            <Marquee 
+                text={marquee.bottom.text}
+                position={marquee.bottom.position}
+                link={marquee.bottom.link}
+            />
+            <Marquee 
+                text={marquee.right.text}
+                position={marquee.right.position}
+                link={marquee.right.link}
+                speed={1}
+            />
+            <Marquee 
+                text={marquee.left.text}
+                position={marquee.left.position}
+                link={marquee.left.link}
+                speed={.5}
+            />
             <main className={`${styles.main} ${inter.className}`}>
                 <div className={styles.wrapper}>
                     <div
                         className={`${styles.middle} ${
-                            hoveredElement === 'middleHovered' ? styles.hovered : ''
+                            hoveredElement === 'middleHovered'
+                                ? styles.hovered
+                                : ''
                         } ${
-                            hoveredElement !== 'middleHovered' && isCurrentlyHovered
+                            hoveredElement !== 'middleHovered' &&
+                            isCurrentlyHovered
                                 ? styles[hoveredElement]
                                 : ''
                         }`}
@@ -46,7 +73,9 @@ export default function Home() {
                     ></div>
                     <a
                         className={`${styles.topLeftCorner} ${styles.corner} ${
-                            hoveredElement === 'topLeftHovered' ? styles.hovered : ''
+                            hoveredElement === 'topLeftHovered'
+                                ? styles.hovered
+                                : ''
                         } ${
                             hoveredElement !== 'topLeft' && isCurrentlyHovered
                                 ? styles[hoveredElement]
@@ -57,46 +86,63 @@ export default function Home() {
                         }}
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        About
+                        ABOUT
                     </a>
                     <a
                         className={`${styles.topRightCorner} ${styles.corner} ${
-                            hoveredElement === 'topRightHovered' ? styles.hovered : ''
+                            hoveredElement === 'topRightHovered'
+                                ? styles.hovered
+                                : ''
                         } ${
-                            hoveredElement !== 'topRightHovered' && isCurrentlyHovered
+                            hoveredElement !== 'topRightHovered' &&
+                            isCurrentlyHovered
                                 ? styles[hoveredElement]
                                 : ''
                         }`}
-                        onMouseEnter={() => handleAnchorHover('topRightHovered')}
+                        onMouseEnter={() =>
+                            handleAnchorHover('topRightHovered')
+                        }
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        Work
+                        WORK
                     </a>
                     <a
-                        className={`${styles.bottomRightCorner} ${styles.corner} ${
+                        className={`${styles.bottomRightCorner} ${
+                            styles.corner
+                        } ${
                             hoveredElement === 'topLeft' ? styles.hovered : ''
                         } ${
-                            hoveredElement !== 'bottomRight' && isCurrentlyHovered
+                            hoveredElement !== 'bottomRight' &&
+                            isCurrentlyHovered
                                 ? styles[hoveredElement]
                                 : ''
                         }`}
-                        onMouseEnter={() => handleAnchorHover('bottomRightHovered')}
+                        onMouseEnter={() =>
+                            handleAnchorHover('bottomRightHovered')
+                        }
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        Contact
+                        CONTACT
                     </a>
                     <a
-                        className={`${styles.bottomLeftCorner} ${styles.corner} ${
-                            hoveredElement === 'bottomLeft' ? styles.hovered : ''
+                        className={`${styles.bottomLeftCorner} ${
+                            styles.corner
                         } ${
-                            hoveredElement !== 'bottomLeft' && isCurrentlyHovered
+                            hoveredElement === 'bottomLeft'
+                                ? styles.hovered
+                                : ''
+                        } ${
+                            hoveredElement !== 'bottomLeft' &&
+                            isCurrentlyHovered
                                 ? styles[hoveredElement]
                                 : ''
                         }`}
-                        onMouseEnter={() => handleAnchorHover('bottomLeftHovered')}
+                        onMouseEnter={() =>
+                            handleAnchorHover('bottomLeftHovered')
+                        }
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        Skills
+                        SKILLS
                     </a>
                 </div>
             </main>

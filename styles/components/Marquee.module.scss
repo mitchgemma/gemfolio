@@ -1,0 +1,30 @@
+.marqueeContainer {
+    height: 43px;
+    position: fixed;
+    border: 2px solid black;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+
+    &.bottom {
+        bottom: 2px;
+        z-index: 1;
+    }
+
+    &.right {
+        bottom: 0;
+        right: 43px;
+        transform: rotate(90deg);
+        transform-origin: bottom right;
+        z-index: -1;
+    }
+
+    &.left {
+        bottom: 0;
+        left: 43px;
+        transform: rotate(-90deg);
+        transform-origin: bottom left;
+        z-index: -1;
+    }
+}
