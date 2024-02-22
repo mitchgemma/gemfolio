@@ -1,9 +1,9 @@
-import { me, bootsy, river, arch, pearl, camp, code } from '../assets/index';
+import { me, bootsy, river, arch, pearl, camp } from '../assets/index';
 
 const marquee = {
     top: {
         position: 'top',
-        link: '',
+        link: 'https://drive.google.com/file/d/1-wRQW02eVmy87b69XWYp-ofaKk-JnRh3/view?usp=sharing',
         text: ['Click here to download resume'],
     },
     right: {

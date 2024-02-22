@@ -8,16 +8,13 @@ const MarqueeComponent = ({ text, position, link, speed }) => {
         <a
             className={`${styles.marqueeContainer} ${styles[position]}`}
             href={link}
+            target="_blank"
         >
             <Marquee autoFill>
                 {text.map((text, index) => (
-                    <div className="flex">
-                        <p key={index}>{text.toUpperCase()}</p>
-                        <img
-                            key={index}
-                            src={code.src}
-                            className={styles.code}
-                        />
+                    <div key={index} className={styles.flex}>
+                        <p>{text.toUpperCase()}</p>
+                        <img src={code.src} className={styles.code} />
                     </div>
                 ))}
             </Marquee>
@@ -29,13 +26,9 @@ const MarqueeComponent = ({ text, position, link, speed }) => {
         >
             <Marquee autoFill className={styles.marqueeContainer} speed={speed}>
                 {text.map((text, index) => (
-                    <div className={styles.flex}>
-                        <p key={index}>{text.toUpperCase()}</p>
-                        <img
-                            key={index}
-                            src={code.src}
-                            className={styles.code}
-                        />
+                    <div key={index} className={styles.flex}>
+                        <p>{text.toUpperCase()}</p>
+                        <img src={code.src} className={styles.code} />
                     </div>
                 ))}
             </Marquee>

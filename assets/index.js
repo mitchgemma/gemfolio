@@ -5,7 +5,9 @@ import arch from './home/arch.jpg'
 import pearl from './home/pearl.jpg'
 import camp from './home/camp.jpg'
 
+
 import code from './icons/code.svg'
+
 
 export {
     me,
@@ -14,5 +16,5 @@ export {
     arch,
     pearl,
     camp,
-    code
+    code,
 }
