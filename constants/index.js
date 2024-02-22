@@ -1,3 +1,5 @@
+import { me, bootsy } from '../assets/index';
+
 const marquee = {
     top: {
         position: 'top',
@@ -33,4 +35,6 @@ const marquee = {
     },
 };
 
-export { marquee };
+const homePhotos = [me, bootsy];
+
+export { marquee, homePhotos };

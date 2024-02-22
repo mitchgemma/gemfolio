@@ -2,19 +2,34 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.scss';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Marquee from '@/components/marquee';
-import { marquee } from '@/constants';
-
+import { marquee, homePhotos } from '@/constants';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
     const [hoveredElement, setHoveredElement] = useState(null);
     const [isCurrentlyHovered, setIsCurrentlyHovered] = useState(false);
+    let [photoIndex, setPhotoIndex] = useState(0);
+    let intervalId = useRef(null);
 
     const handleAnchorHover = (element, isHovered) => {
         setHoveredElement(element);
         setIsCurrentlyHovered(element);
+
+
+        if (element === 'middleHovered') {
+            intervalId.current = setInterval(() => {
+                setPhotoIndex((prevIndex) => {
+                    const arrayLength = homePhotos.length;
+                    const newIndex = (prevIndex + 1) % arrayLength;
+
+                    return newIndex;
+                });
+            }, 300);
+        } else {
+            clearInterval(intervalId.current);
+        }
     };
 
     return (
@@ -31,27 +46,27 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Marquee 
+            <Marquee
                 text={marquee.top.text}
                 position={marquee.top.position}
                 link={marquee.top.link}
             />
-            <Marquee 
+            <Marquee
                 text={marquee.bottom.text}
                 position={marquee.bottom.position}
                 link={marquee.bottom.link}
             />
-            <Marquee 
+            <Marquee
                 text={marquee.right.text}
                 position={marquee.right.position}
                 link={marquee.right.link}
                 speed={1}
             />
-            <Marquee 
+            <Marquee
                 text={marquee.left.text}
                 position={marquee.left.position}
                 link={marquee.left.link}
-                speed={.5}
+                speed={0.5}
             />
             <main className={`${styles.main} ${inter.className}`}>
                 <div className={styles.wrapper}>
@@ -70,7 +85,12 @@ export default function Home() {
                             handleAnchorHover('middleHovered');
                         }}
                         onMouseLeave={() => handleAnchorHover(null, false)}
-                    ></div>
+                    >
+                        <img
+                            className={styles.image}
+                            src={homePhotos[photoIndex].src}
+                        />
+                    </div>
                     <a
                         className={`${styles.topLeftCorner} ${styles.corner} ${
                             hoveredElement === 'topLeftHovered'
