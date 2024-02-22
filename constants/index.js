@@ -9,17 +9,29 @@ const marquee = {
     right: {
         position: 'right',
         link: '',
-        text: ['Thanks for your patience', 'Site is under construction'],
+        text: [
+            'Site is under construction',
+            "The site is not broken, this is the only page that I've built",
+            'Thanks for your patience',
+        ],
     },
     bottom: {
         position: 'bottom',
-        link: '',
-        text: ['Mitch "Wuxi Finger Hold" Gemma', 'Frontend Developer'],
+        link: 'https://github.com/mitchgemma',
+        text: [
+            'Mitch "Wuxi Finger Hold" Gemma',
+            'Frontend Developer',
+            'Click here to visit my GitHub',
+        ],
     },
     left: {
         position: 'left',
         link: '',
-        text: ['Thanks for your patience', 'Site is under construction'],
+        text: [
+            'Site is under construction',
+            "The site is not broken, this is the only page that I've built",
+            'Thanks for your patience',
+        ],
     },
 };
 
