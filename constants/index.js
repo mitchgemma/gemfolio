@@ -1,40 +1,28 @@
-import { me, bootsy } from '../assets/index';
+import { me, bootsy, river, arch, pearl, camp, code } from '../assets/index';
 
 const marquee = {
     top: {
         position: 'top',
         link: '',
-        text: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        ],
+        text: ['Click here to download resume'],
     },
     right: {
         position: 'right',
         link: '',
-        text: [
-            'Hello',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        ],
+        text: ['Thanks for your patience', 'Site is under construction'],
     },
     bottom: {
         position: 'bottom',
         link: '',
-        text: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        ],
+        text: ['Mitch "Wuxi Finger Hold" Gemma', 'Frontend Developer'],
     },
     left: {
         position: 'left',
         link: '',
-        text: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        ],
+        text: ['Thanks for your patience', 'Site is under construction'],
     },
 };
 
-const homePhotos = [me, bootsy];
+const homePhotos = [me, bootsy, river, arch, pearl, camp];
 
 export { marquee, homePhotos };
