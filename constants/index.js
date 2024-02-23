@@ -1,6 +1,8 @@
 import { me, bootsy, river, arch, pearl, camp } from '../assets/index';
 
 const marquee = {
+    // if text is too short, it will make the entire site glitch out
+    // likely an issue with the library and the 'autofill' property
     top: {
         position: 'top',
         link: 'https://drive.google.com/file/d/1-wRQW02eVmy87b69XWYp-ofaKk-JnRh3/view?usp=sharing',

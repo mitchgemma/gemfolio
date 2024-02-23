@@ -106,9 +106,9 @@ export default function Home() {
                         }}
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        ABOUT
+                        IN PROGRESS
                     </a>
-                    <a
+                    <a href='work'
                         className={`${styles.topRightCorner} ${styles.corner} ${
                             hoveredElement === 'topRightHovered'
                                 ? styles.hovered
@@ -142,7 +142,7 @@ export default function Home() {
                         }
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        CONTACT
+                        IN PROGRESS
                     </a>
                     <a
                         className={`${styles.bottomLeftCorner} ${
@@ -162,7 +162,7 @@ export default function Home() {
                         }
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        SKILLS
+                        IN PROGRESS
                     </a>
                 </div>
             </main>
