@@ -1,11 +1,26 @@
-import styles from '@/styles/pages/Work.module.scss'
+import styles from '@/styles/pages/Work.module.scss';
+import Project from '@/components/project';
+import { projects } from '@/constants';
 
-const work = () => {
+const Work = () => {
+    const projectData = projects.map((project, index) => (
+        <Project
+            key={index}
+            index={index}
+            projectName={project.name}
+            description={project.description}
+            tech={String(project.tech)}
+            thumbnail={String(project.thumbnail)}
+            link={project.link}
+        />
+    ));
+
     return (
-        <div className={styles.container}>
+        <div className={styles.wrapper}>
             <h1 className={styles.header}>Recent Work</h1>
+            {projectData}
         </div>
-    )
+    );
 };
 
-export default work;
+export default Work;
