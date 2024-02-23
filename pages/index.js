@@ -86,7 +86,7 @@ export default function Home() {
                         }}
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        <Image
+                        <img
                             className={styles.image}
                             src={homePhotos[photoIndex].src}
                         />
