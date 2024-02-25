@@ -21,8 +21,7 @@ const marquee = {
         position: 'bottom',
         link: 'https://github.com/mitchgemma',
         text: [
-            'Mitch "Wuxi Finger Hold" Gemma',
-            'Frontend Developer',
+            'Mitch Gemma - Frontend Developer',
             'Click here to visit my GitHub',
         ],
     },
@@ -49,7 +48,7 @@ const projects = [
     {
         name: 'Righthand Robotics',
         description:
-            'I have worked on this website for 40 hours each month for the past 2 years. As the sole developer on this website, I worked on everything from new page development, to site health and optimization, code modernization, and more. This was a codebase that was handed to me, and it certainly shows it\'s age at times. A large challenge for me was learning how to work with code, as well finding the time to try and update that code, and try to get the code to work with mine. My most recent work on this site are the revamped <a className="link" target="_blank" href="https://righthandrobotics.com">homepage</a> and the <a className="link" target="_blank" href="https://righthandrobotics.com/products">products</a> page.',
+            'I have worked on this website for 40 hours each month for the past 2 years. As the sole developer on this website, I worked on everything from new page development, to site health and optimization, code modernization, and more. This was a codebase that was handed to me, and it certainly shows it\'s age at times. A large challenge for me was learning how to work with code, as well finding the time to try and update that code, and try to get the code to work with mine. My most recent work on this site are the revamped <a class="link" target="_blank" href="https://righthandrobotics.com">homepage</a> and the <a class="link" target="_blank" href="https://righthandrobotics.com/products">products</a> page.',
         tech: 'React, SCSS, Vanilla JS, GreenSock Animation (GSAP), PHP, GraphQL Craft CMS',
         thumbnail: rhr.src,
         link: 'https://righthandrobotics.com',

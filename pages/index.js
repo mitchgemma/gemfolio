@@ -106,7 +106,7 @@ export default function Home() {
                         }}
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        IN PROGRESS
+                        Coming Soon
                     </a>
                     <a href='work'
                         className={`${styles.topRightCorner} ${styles.corner} ${
@@ -142,7 +142,7 @@ export default function Home() {
                         }
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        IN PROGRESS
+                        Coming Soon
                     </a>
                     <a
                         className={`${styles.bottomLeftCorner} ${
@@ -162,7 +162,7 @@ export default function Home() {
                         }
                         onMouseLeave={() => handleAnchorHover(null, false)}
                     >
-                        IN PROGRESS
+                        Coming Soon
                     </a>
                 </div>
             </main>
