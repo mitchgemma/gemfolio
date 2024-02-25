@@ -5,9 +5,9 @@ import arch from './home/arch.jpg'
 import pearl from './home/pearl.jpg'
 import camp from './home/camp.jpg'
 
-
 import code from './icons/code.svg'
 
+import rhr from './projects/project-2.png'
 
 export {
     me,
@@ -17,4 +17,5 @@ export {
     pearl,
     camp,
     code,
+    rhr
 }
