@@ -5,6 +5,24 @@ import styles from '@/styles/pages/Home.module.scss';
 import React, { useState, useEffect, useRef } from 'react';
 import Marquee from '@/components/marquee';
 import { marquee, homePhotos } from '@/constants';
+import { datadogRum } from '@datadog/browser-rum';
+
+datadogRum.init({
+    applicationId: '85673056-41c3-4fc6-bb9a-cdda6868b8f6',
+    clientToken: 'pub0654631d605f7b036193973c5ddfc505',
+    site: 'us5.datadoghq.com',
+    service: 'portfolio',
+    env: 'dev',
+    // Specify a version number to identify the deployed version of your application in Datadog
+    // version: '1.0.0',
+    sessionSampleRate: 100,
+    sessionReplaySampleRate: 20,
+    trackUserInteractions: true,
+    trackResources: true,
+    trackLongTasks: true,
+    defaultPrivacyLevel: 'mask-user-input',
+});
+
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
